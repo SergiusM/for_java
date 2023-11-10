@@ -55,8 +55,17 @@ public class Main {
                 case 'w': board.setColorGaming('b'); break;
                 case 'b': board.setColorGaming('w'); break;
             }
-
-
+            
+            if (board.CheckMate()){
+                System.out.println("Игра завршена.");
+                if (board.getColorGaming() == 'w'){
+                    System.out.println("Победели черные");
+                }else {
+                    System.out.println("Победели белые");
+                }
+                in.close();
+                break;
+            }
 
         }
 
